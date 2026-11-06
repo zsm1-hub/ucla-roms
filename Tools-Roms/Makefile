@@ -130,6 +130,14 @@ R2R_INIT_BEC2 = r2r_init_bec2.o r2r_interp_init.o r2r_subs.o r2r_rotate.o \
 r2r_init_bec2: $(R2R_INIT_BEC2)
 	$(LDR) $(FFLAGS) $(LDFLAGS) -o r2r_init_bec2 $(R2R_INIT_BEC2) $(LCDF)
 
+R2R_BRY_BEC2 = r2r_bry_bec2.o r2r_bry_interp.o r2r_subs.o \
+               r2r_bry_rotate.o r2r_rotate.o r2r_vert_interp.o \
+               set_depth.o etch_into_land.o spln2d.o tiling.o \
+               def_bry_bec2_file.o roms_read_write.o read_string.o lenstr.o
+
+r2r_bry_bec2: $(R2R_BRY_BEC2)
+	$(LDR) $(FFLAGS) $(LDFLAGS) -o r2r_bry_bec2 $(R2R_BRY_BEC2) $(LCDF)
+
  R2R_BRY = r2r_bry.o r2r_bry_interp.o r2r_subs.o r2r_bry_rotate.o r2r_rotate.o\
            r2r_vert_interp.o set_depth.o etch_into_land.o spln2d.o tiling.o\
            def_bry_file.o roms_read_write.o read_string.o lenstr.o
