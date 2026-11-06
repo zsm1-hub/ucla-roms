@@ -1,5 +1,7 @@
 ROMS related tools:
 
+OMP_NUM_THREADS=1
+
 To compile tools: 
 1) Simply type "make" 
 
