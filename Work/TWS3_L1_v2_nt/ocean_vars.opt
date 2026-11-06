@@ -1,0 +1,46 @@
+
+      ! ****************************************************************
+      ! user inputs
+      logical,parameter :: wrt_file_rst      = .true.     ! t/f to write module history file
+      real,parameter    :: output_period_rst = 2592000        ! output period in seconds
+      logical,parameter :: monthly_restarts = .false.      ! This overrides output_period
+      integer,parameter :: nrpf_rst          =  1          ! total recs per file
+      
+      logical,parameter :: wrt_file_his      = .true.      ! t/f to write module history file
+      real,parameter    :: output_period_his = 3600       ! output period in seconds
+      integer,parameter :: nrpf_his          = 24          ! total recs per file      
+      logical,parameter :: wrt_Z =.true.,
+     &                     wrt_Ub=.true.,
+     &                     wrt_Vb=.true.,
+     &                     wrt_U=.true.,
+     &                     wrt_V=.true.,
+     &                     wrt_R=.true.,
+     &                     wrt_O=.true.,
+     &                     wrt_W=.true.,
+     &                     wrt_Akv=.true.,
+     &                     wrt_Akt=.true.,
+     &                     wrt_Aks=.false.,
+     &                     wrt_Hbls=.true.,
+     &                     wrt_Hbbl=.true.,
+     &                     wrt_uwnd=.true.
+      
+      logical,parameter :: wrt_file_avg      = .true.     ! t/f to write module averages file
+      real,parameter    :: output_period_avg = 10800         ! output averaging period in seconds
+      integer,parameter :: nrpf_avg          = 8          ! total recs per file
+      logical,parameter :: wrt_avg_Z =.true.,
+     &                     wrt_avg_Ub=.true.,
+     &                     wrt_avg_Vb=.true.,
+     &                     wrt_avg_U=.true.,
+     &                     wrt_avg_V=.true.,
+     &                     wrt_avg_R=.true.,
+     &                     wrt_avg_O=.false.,
+     &                     wrt_avg_W=.false.,
+     &                     wrt_avg_Akv=.false.,
+     &                     wrt_avg_Akt=.false.,
+     &                     wrt_avg_Aks=.false.,
+     &                     wrt_avg_Hbls=.false.,
+     &                     wrt_avg_Hbbl=.false.
+
+      logical :: code_check = .True.                       ! keep as false unless for code_check      
+      ! end user inputs
+      ! ****************************************************************

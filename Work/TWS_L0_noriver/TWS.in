@@ -1,0 +1,72 @@
+title:
+   Test for Iceland.
+
+time_stepping: NTIMES   dt[sec]  NDTFAST  NINFO
+               47520        120       30       1
+
+S-coord: THETA_S,   THETA_B,    hc (m)
+          7.0D0        2.0D0     200.0D0
+
+grid:  filename
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS2_L0_grid.nc
+
+forcing: filename
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_era_20180102.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_era_2018030405.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_era_2018060708.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_era_2018091011.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_era_201812.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_era_2019010203.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_era_2019040506.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201801.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201802.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201803.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201804.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201805.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201806.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201807.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201808.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201809.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201810.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201811.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201812.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201901.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201902.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201903.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201904.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201905.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_bounary_field_201906.nc
+     /pacific4/user/zsm/input_data/TWS_L0/partfiles/TWS_tidal_forcing.nc
+
+initial: NRREC  filename
+          -1
+     /leader/user/zsm/TWS2_L0_ucla_noriver/TWS_L0_noriver_rst.20181028000200.nc
+
+output_root_name:
+     /leader/user/zsm/TWS2_L0_ucla_noriver/TWS_L0_noriver
+
+lateral_visc:   VISC2,    VISC4    [m^2/sec for all]
+                 0.       0.
+
+rho0:
+      1027.5
+
+v_sponge:           V_SPONGE [m^2/sec]
+                   1.
+
+vertical_mixing:  Akv  Akt1  Akt2
+                  0.0  0.0   0.0
+
+
+tracer_diff2: TNU2(1:NT)           [m^2/sec for all]
+ 0. 0. 0. 0. 0. 0. 0. 0. 0.
+
+bottom_drag:     RDRG [m/s],  RDRG2,  Zob [m],  Cdb_min, Cdb_max
+                  0.E-4       1.0E-3   1.E-2     1.E-4    1.E-2
+
+gamma2:
+                  1.D0
+
+ubind: OBC binding velocity scale [m/s]
+       0.1
+

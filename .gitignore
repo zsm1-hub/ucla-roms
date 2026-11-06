@@ -1,0 +1,51 @@
+# Compilation products
+**/Compile/
+**/Build/
+*.o
+*.mod
+*.smod
+*.a
+*.so
+
+# Compiled executables
+**/roms
+**/romsM
+**/romsG
+**/ncjoin
+**/zslice
+**/partit
+
+# Runtime output
+*.log
+*.out
+*.err
+slurm-*.out
+core
+core.*
+
+# ROMS model output
+*.his.nc
+*.avg.nc
+*.rst.nc
+*.dia.nc
+*.flt.nc
+
+# Backups and temporary files
+*.bak
+*BAK*
+*~
+*.swp
+
+# Python/Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Credentials
+.env
+.env.*
+*.pem
+*.key
+.netrc
+*.nc
+*.nc4

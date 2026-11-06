@@ -1,0 +1,119 @@
+/* This is "cppdefs.opt": MODEL CONFIGURATION FILE
+   ==== == ============ ===== ============= ==== */
+
+/*
+ * CHOOSE ONLY ONE PRIMARY FLAG FOR SWITCH LIST BELOW
+ */
+
+#define RIVERS
+
+
+#if defined RIVERS
+
+c--# define DIAGNOSTICS
+c--# define TIDES
+c--# define BULK_FRC
+# define SPONGE_TUNE
+# define RIVER_SOURCE
+/*# define EXTRACT_DATA*/
+
+c--# define SFLX_CORR
+
+# define SOLVE3D
+# define UV_COR
+# define UV_ADV
+
+# define CURVGRID
+# define SPHERICAL
+# define MASKING
+
+# define SALINITY
+# define NONLIN_EOS
+# define SPLIT_EOS
+
+c--# define AVERAGES
+# define IMPLICIT_BOTTOM_DRAG
+
+# define UV_VIS2
+# define TS_DIF2
+
+# define LMD_MIXING
+# define LMD_KPP
+# define LMD_BKPP
+# define LMD_RIMIX
+# define LMD_NONLOCAL
+c--# define LMD_CONVEC
+
+
+# define OBC_EAST
+# define OBC_NORTH
+# define OBC_SOUTH
+
+# define OBC_M2FLATHER  /* Barotop. BC: OBC_M2FLATHER, OBC_M2ORLANSKI, OBC_M2SPECIFIED */
+# define OBC_M3ORLANSKI /* Baroclin. BC: OBC_M3ORLANSKI, OBC_M3SPECIFIED */
+# define OBC_TORLANSKI  /* Tracer BC: OBC_TORLANSKI, OBC_TSPECIFIED */
+
+# define Z_FRC_BRY
+# define M2_FRC_BRY
+# define M3_FRC_BRY
+# define T_FRC_BRY
+# define SPONGE
+
+#  define BULK_FRC
+#  ifdef BULK_FRC
+#   define SURF_FLUX_OUTPUT_HIS /* DevinD output flux variables */
+#   define SURF_FLUX_OUTPUT_AVG /* DevinD output flux variables as averages */
+#  endif
+
+
+/* Tides */
+# define TIDES
+# ifdef TIDES
+#  define POT_TIDES
+#  define SSH_TIDES
+#  define UV_TIDES
+c-dd-gone#  define TIDERAMP ! No longer using tideramp
+# endif
+
+#ifdef WEC
+# define BRK0
+# define SURFACE_BREAK
+# undef SPEC_DD
+# undef LOG_BDRAG
+# undef WKB_WWAVE
+# undef BBL
+# define WAVE_OFFLINE
+# define WAVE_FRICTION
+# define BBL_S95
+c# define BBL_F00
+# define SUP_OFF
+# define WAVE_DIFF_FROM_LM
+#endif /* WEC */
+
+
+c--# define DIAGNOSTICS
+
+
+
+#define BIOLOGY_BEC2
+
+#ifdef BIOLOGY_BEC2
+# define BIOLOGY
+c--# define BEC2_DIAG
+# define Ncycle_SY
+# undef  TDEP_REMIN
+# undef  DAILYPAR_BEC
+# undef DAILYPAR_PHOTOINHIBITION /* need daily swrad_LF*/
+# define NOX_FORCING
+# define NHY_FORCING
+#endif
+
+#if defined(BIOLOGY_BEC2) || defined(MARBL)
+# define PCO2AIR_FORCING
+#endif
+
+#endif
+
+
+#include "set_global_definitions.h"
+

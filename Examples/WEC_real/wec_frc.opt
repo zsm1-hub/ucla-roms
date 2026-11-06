@@ -1,0 +1,33 @@
+
+      ! ****************************************************************
+      ! user inputs
+      logical,parameter :: wrt_file_his      = .false.      ! t/f to write module history file
+      real,parameter    :: output_period = 100         ! output period in seconds
+      integer,parameter :: nrpf          = 10          ! total recs per file
+
+      logical,parameter :: wrt_SUP  =.false.,
+     &                     wrt_UST2D=.false., 
+     &                     wrt_VST2D=.false.,
+     &                     wrt_UST  =.false.,
+     &                     wrt_VST  =.false.,
+     &                     wrt_wST  =.false.,
+     &                     wrt_AKB  =.false.,
+     &                     wrt_AKW  =.false.,   
+     &                     wrt_KVF  =.false.,
+     &                     wrt_CALP =.false.,  
+     &                     wrt_KAPS =.false.
+      
+      logical,parameter :: wrt_file_avg      = .false.      ! t/f to write module averages file
+      logical,parameter :: wrt_avg_SUP  =.false.,
+     &                     wrt_avg_UST2D=.false., 
+     &                     wrt_avg_VST2D=.false.,
+     &                     wrt_avg_UST  =.false.,
+     &                     wrt_avg_VST  =.false.,
+     &                     wrt_avg_wST  =.false.,
+     &                     wrt_avg_AKB  =.false.,
+     &                     wrt_avg_AKW  =.false.,   
+     &                     wrt_avg_KVF  =.false.,
+     &                     wrt_avg_CALP =.false.,  
+     &                     wrt_avg_KAPS =.false.
+      ! end user inputs
+      ! ****************************************************************
