@@ -1,0 +1,59 @@
+title:
+   Test for Iceland.
+
+time_stepping: NTIMES   dt[sec]  NDTFAST  NINFO
+               630720        100       30       1
+
+S-coord: THETA_S,   THETA_B,    hc (m)
+          6.0D0        2.0D0     20.0D0
+
+grid:  filename
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/TWS3_L1_grid_stcc.nc
+
+forcing: filename
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/TWS3_L1_era2018091011.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/TWS3_L1_era201812.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/TWS3_L1_era2019010203.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/TWS_L1_frc_BEC2_clim_clim.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/TWS_L1_frc_pco2_clim.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/TWS_L1_river_DAI_BEC2_climatology.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/roms_bry_201810.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/roms_bry_201811.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/roms_bry_201812.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/roms_bry_bec2_201810.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/roms_bry_bec2_201811.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/roms_bry_bec2_201812.nc
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/TWS3_L1_tidal_forcing_stcc.nc
+
+initial: NRREC  filename
+          -1
+     /pacific4/user/zsm/input_data/TWS3_L1_BEC2/partfiles/roms_init_bec2_20181028.nc
+
+output_root_name:
+     /leader/user/zsm/TWS_L1_BEC2/TWS_L1
+
+lateral_visc:   VISC2,    VISC4    [m^2/sec for all]
+                 0.       0.
+
+rho0:
+      1027.5
+
+v_sponge:           V_SPONGE [m^2/sec]
+                   100.
+
+vertical_mixing:  Akv  Akt1  Akt2
+                  0.0  0.0   0.0
+
+tracer_diff2: TNU2(1:NT)           [m^2/sec for all]
+              0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+
+
+bottom_drag:     RDRG [m/s],  RDRG2,  Zob [m],  Cdb_min, Cdb_max
+                  0.E-4       1.0E-3   1.E-2     1.E-4    1.E-2
+
+gamma2:
+                  1.D0
+
+ubind: OBC binding velocity scale [m/s]
+       0.1
+

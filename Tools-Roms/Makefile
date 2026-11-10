@@ -172,6 +172,16 @@ ipslice.f: zslice.F
 sample: $(SAMPLE)
 	$(LDR) $(FFLAGS) -o sample $(SAMPLE) $(LCDF)
 
+# Independent ROMS-to-ROMS initializer with BEC2 tracers.  It uses a
+# distinct executable name and does not replace the original r2r_init.
+R2R_INIT_BEC2_LINEAR = r2r_init_bec2_linear.o r2r_linear_interp.o \
+                       r2r_interp_init.o r2r_subs.o r2r_rotate.o \
+                       r2r_vert_interp.o set_depth.o etch_into_land.o \
+                       spln2d.o tiling.o roms_read_write.o read_string.o lenstr.o
+
+r2r_init_bec2_linear: $(R2R_INIT_BEC2_LINEAR)
+	$(LDR) $(FFLAGS) $(LDFLAGS) -o r2r_init_bec2_linear $(R2R_INIT_BEC2_LINEAR) $(LCDF)
+
 clean:
 	/bin/rm -f *.f *.o *.a *.s *.trace *.mod
 

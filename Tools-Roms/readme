@@ -1,6 +1,8 @@
 ROMS related tools:
 
 OMP_NUM_THREADS=1
+make FFLAGS="-O3 -qopenmp" LDFLAGS="-qopenmp" r2r_init_bec2_linear
+
 
 To compile tools: 
 1) Simply type "make" 
