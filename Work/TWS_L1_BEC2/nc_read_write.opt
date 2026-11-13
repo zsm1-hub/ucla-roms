@@ -4,5 +4,5 @@
       integer,parameter  :: deflate_level=1 ! Compression level for joined file
       logical,parameter  :: shuffle=.true.  ! Shuffle on for extra conmpression
 
-      integer,parameter :: default_prec = nf90_double
+      integer,parameter :: default_prec = nf90_float
 
